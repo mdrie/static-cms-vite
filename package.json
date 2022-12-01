@@ -1,0 +1,16 @@
+{
+  "name": "static-cms-vite",
+  "scripts": {
+    "cms:proxy": "static-cms-proxy-server",
+    "cms:serve": "vite public/admin",
+    "startcms": "concurrently --kill-others npm:cms:*"
+  },
+  "devDependencies": {
+    "@staticcms/proxy-server": "^1.0.15",
+    "concurrently": "^7.6.0",
+    "vite": "^3.2.4"
+  },
+  "dependencies": {
+    "@staticcms/core": "^1.0.0-beta2"
+  }
+}

@@ -1,0 +1,23 @@
+backend:
+  name: git-gateway
+local_backend: true
+
+media_folder: "public/images/uploads" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+
+slug:
+  clean_accents: true
+
+
+
+collections:
+
+  - label: "Entries"
+    name: "entries"
+    folder: "content"
+    extension: "yml"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: Title, name: title, widget: string}
+      - {label: Description, name: description, widget: markdown, required: false}
